@@ -1,10 +1,10 @@
-fn calculate_area_perimeter(length: f64, width: f64) -> (f64, f64) {
-    let area = length * width;
-    let perimeter = 2.0 * (length + width);
-    (area, perimeter)
+5. arr_square() - Array of Squares
+fn arr_square(arr: &[i32]) -> Vec<i32> {
+    arr.iter().map(|&x| x * x).collect()
 }
 
 fn main() {
-    let (area, perimeter) = calculate_area_perimeter(10.0, 5.0);
-    println!("Area: {}, Perimeter: {}", area, perimeter);
+    let numbers = [1, 2, 3, 4, 5];
+    let squares = arr_square(&numbers);
+    println!("Squares: {:?}", squares);
 }
